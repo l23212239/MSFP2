@@ -1,8 +1,7 @@
-\[!\[Open in MATLAB Online]
+[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=l23212239/MSFP2)
+# Práctica dos: Sistema cardiovascular
 
-# Práctica 5.4: Modelado y control del sistema cardiovascular mediante el modelo Windkessel
-
-## Información de la estudiante
+## Información del estudiante
 
 Gabriel Fernando Trejo Paz \ 23212239; L23212239@tectijuana.edu.mx
 
@@ -45,13 +44,13 @@ Palabras clave: Modelo Windkessel; Sistema cardiovascular; Presión arterial; Fl
 
 ## Lista de archivos incluidos en el repositorio
 
-1. Cuaderno computacional de MATLAB [.mlx].
-2. Análisis matemático Función de transferencia, modelo de ecuaciones integro-diferenciales, estabilidad y error en estado estacionario.
+1. Cuaderno computacional de MATLAB [.mlx y .pdf].
+2. Análisis matemático: función de transferencia, modelo de ecuaciones integro-diferenciales, estabilidad y error en estado estacionario.
 3. Diagrama biológico desarrollado en BioRender.
 4. Modelo de Simulink [ .slx].
 5. Código fuente desarrollado en Python [ .py].
-6. Imagen con los parámetros del controlador.
-7. Imágenes de las simulaciones [.pdf y .png].
+6. Imagen con los parámetros del controlador (2).
+7. Figuras de las simulaciones en Python (3) y Matlab (4) [.pdf].
 8. Archivo signal [ .xlsx].
 ## Referencias
 
