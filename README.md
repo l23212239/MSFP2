@@ -4,7 +4,7 @@
 
 ## Información de la estudiante
 
-Nombres y Apellidos \[No. Control]; correo institucional
+Gabriel Fernando Trejo Paz \ 23212239; L23212239@tectijuana.edu.mx
 
 Modelado de Sistemas Fisiológicos
 
@@ -24,44 +24,35 @@ La asignatura de Modelado de Sistemas Fisiológicos forma parte del plan de estu
 
 ## Objetivos
 
-1. Identificar los elementos fisiológicos y eléctricos equivalentes del modelo Windkessel: flujo sanguíneo, resistencia vascular, distensibilidad arterial y presión arterial.
-2. Formular la ecuación diferencial ordinaria que describe la dinámica de la presión arterial a partir del balance de flujo.
-3. Obtener y analizar la función de transferencia del modelo Windkessel como representación complementaria de la ecuación diferencial ordinaria.
-4. Analizar la estabilidad del sistema y determinar el error en estado estacionario para las entradas consideradas.
-5. Simular la respuesta del sistema cardiovascular en Simulink/MATLAB ante cambios en el flujo de entrada y en los parámetros de resistencia y distensibilidad.
-6. Diseñar y sintonizar un controlador PID para regular la presión arterial y reducir el error entre la presión de referencia y la presión medida.
-7. Comparar la respuesta en lazo abierto y en lazo cerrado, considerando el transitorio, el tiempo de establecimiento, el sobreimpulso y el error en estado estacionario.
-8. Implementar en Spyder/Python la solución numérica de la ecuación diferencial ordinaria y la simulación del controlador para validar los resultados obtenidos en Simulink/MATLAB.
+1. Calcular la función de transferencia.
+2. Determinar el modelo de ecuaciones integro-diferenciales.
+3. Analizar la estabilidad del sistema.
+4. Determinar el error en estado estacionario.
+5. Identificar los elementos fisiológicos y eléctricos equivalentes del modelo Windkessel.
+5. Emular la respuesta del sistema cardiovascular en Simulink/Simscape para tres casos: normotenso, hipotenso, hipertenso.
+6. Sintonizar las ganancias de dos controladores PID para los casos hipotenso e hipertenso, en Simulink/MATLAB para eliminar el error entre la entrada y la salida del sistema.
+7. Simular la respuesta del sistema en lazo abierto y lazo cerrado en Simulink/MATLAB para los casos hipotenso e hipertenso.
+8. Implementar en Python las comparativas de control para los casos hipotenso e hipertenso, y analizar la respuesta en lazo abierto de los estados normotenso, hipotenso e hipertenso.
+9. Diseñar un diagrama biológico mediante BioRender equivalente a un diagrama del sistema cardiovascular y su relación con el circuito eléctrico de cuatro elementos.
 
 ## Descripción detallada del sistema
 
-En esta práctica se modela el sistema cardiovascular mediante el modelo Windkessel, una analogía eléctrica de la circulación arterial. La resistencia vascular representa la oposición al flujo sanguíneo y la distensibilidad arterial representa la capacidad de las arterias para almacenar volumen, de forma análoga a un capacitor. La presión arterial se obtiene a partir del balance entre el flujo de entrada del corazón, el flujo de salida hacia la circulación periférica y el almacenamiento de volumen en el compartimento arterial.
+En esta práctica se modela el sistema cardiovascular mediante el modelo Windkessel de cuatro elementos, una analogía eléctrica del sistema cardiovascular. La resistencia periférica representa la oposición al flujo sanguíneo y la distensibilidad arterial representa la capacidad de las arterias para almacenar volumen, de forma análoga a un capacitor. La presión arterial se obtiene a partir del balance entre el flujo de entrada del corazón, el flujo de salida hacia la circulación periférica y el almacenamiento de volumen en el compartimento arterial.
 
-La diferencia principal respecto a la práctica anterior es que la dinámica del sistema se formula directamente mediante ecuaciones diferenciales ordinarias (EDO), en lugar de partir únicamente de un circuito RLC y su función de transferencia. Para el modelo Windkessel de dos elementos, la ecuación de balance es
-
-\[
-C\frac{dP(t)}{dt}=Q_{in}(t)-\frac{P(t)}{R},
-\]
-
-donde \(P(t)\) es la presión arterial, \(Q_{in}(t)\) es el flujo sanguíneo de entrada, \(R\) es la resistencia vascular periférica y \(C\) es la distensibilidad arterial. Al despejar la derivada se obtiene la EDO en forma explícita:
-
-\[
-\frac{dP(t)}{dt}=\frac{1}{C}\left(Q_{in}(t)-\frac{P(t)}{R}\right).
-\]
-
-Esta ecuación permite calcular la evolución temporal de la presión a partir de una condición inicial y de una entrada de flujo. La constante de tiempo del sistema es \(\tau=RC\), por lo que un aumento de la resistencia o de la distensibilidad hace más lenta la respuesta. Para el modelo Windkessel de tres elementos puede incorporarse una resistencia característica \(R_c\), con \(P_a(t)=R_cQ_{in}(t)+P_c(t)\) y \(C\,dP_c(t)/dt=Q_{in}(t)-P_c(t)/R\). La función de transferencia se utiliza como representación equivalente para el análisis de control, mientras que la EDO conserva de manera explícita la variable de estado y facilita la simulación de entradas fisiológicas variables.
+Una diferencia respecto a la práctica anterior es que la dinámica del sistema se formula también mediante ecuaciones diferenciales ordinarias (EDO), en lugar de partir únicamente de un circuito RLC y su función de transferencia. La función de transferencia se utiliza como representación equivalente para el análisis de control, mientras que las EDOs relacionan el flujo de entrada con el almacenamiento y la salida del sistema.
 
 Palabras clave: Modelo Windkessel; Sistema cardiovascular; Presión arterial; Flujo sanguíneo; Ecuaciones diferenciales ordinarias; Controlador PID; Simulaciones numéricas.
 
 ## Lista de archivos incluidos en el repositorio
 
-1. Cuaderno computacional de MATLAB \[.mlx].
-2. Modelo de Simulink del sistema cardiovascular y del controlador \[.slx].
-3. Archivos de Spyder/Python para resolver la ecuación diferencial ordinaria \[.py].
-4. Imagen con los parámetros del modelo Windkessel y del controlador.
-5. Imágenes de las simulaciones de presión y flujo \[.pdf y .png].
-6. Análisis matemático: analogía Windkessel, ecuación diferencial ordinaria, función de transferencia, estabilidad, constante de tiempo y error en estado estacionario.
-
+1. Cuaderno computacional de MATLAB [.mlx].
+2. Análisis matemático Función de transferencia, modelo de ecuaciones integro-diferenciales, estabilidad y error en estado estacionario.
+3. Diagrama biológico desarrollado en BioRender.
+4. Modelo de Simulink [ .slx].
+5. Código fuente desarrollado en Python [ .py].
+6. Imagen con los parámetros del controlador.
+7. Imágenes de las simulaciones [.pdf y .png].
+8. Archivo signal [ .xlsx].
 ## Referencias
 
 \[1] P. A. Valle, Syllabus para Modelado de Sistemas Fisiológicos, Tecnológico Nacional de México / Instituto Tecnológico de Tijuana, Tijuana, B.C., México, 2025. Permalink: https://biomath.xyz/course/
